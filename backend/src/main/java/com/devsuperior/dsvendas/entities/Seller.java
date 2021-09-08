@@ -17,18 +17,18 @@ public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String name;
 
     @OneToMany(mappedBy = "seller")
-    private List<Sale> sales = new ArrayList<Sale>();
+    private List<Sale> sales = new ArrayList<>();
 
     Seller(){
 
     }
 
-    Seller(Long id, String nome){
+    Seller(Long id, String name){
         this.id = id;
-        this.nome = nome;
+        this.name = name;
     }
 
     public Long getId() {
@@ -37,11 +37,11 @@ public class Seller {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String name) {
+        this.name = name;
     }
 
     public List<Sale> getSales() {
